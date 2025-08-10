@@ -13,7 +13,8 @@
       background-color: #f9f9f9;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       color: #2c3e50;
     }
 
@@ -29,9 +30,12 @@
       list-style-type: none;
       padding: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      /* Stack vertically */
+      align-items: center;
+      /* Center each row horizontally */
       gap: 20px;
-      flex-wrap: wrap;
+      /* Space between rows */
     }
 
     li a {
@@ -45,6 +49,7 @@
       transition: background-color 0.3s ease;
     }
 
+
     li a:hover {
       background-color: #1c5980;
     }
@@ -56,6 +61,7 @@
 
   <h2>CSCN8000-25S-Sec1-Artificial Intelligence Algorithms and Mathematics</h2>
   <ul>
+    <li><a href="final_project_report.html">Final Project Report (student success chatbot)</a></li>
     <li><a href="CSCN8000-lab1.html">Lab 1 Basic NumPy Operations</a></li>
     <li><a href="CSCN8000-lab2.html">Lab 2</a></li>
     <li><a href="CSCN8000-lab3.html">Lab 3 Supervised Learning</a></li>

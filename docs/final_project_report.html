@@ -288,6 +288,15 @@ Chatbot: "I'm really sorry you're feeling this way. You don’t have to go throu
                         <p class="small">A fine-tuned BERT + tokenizer reads the input, tokenizes it into tensors,
                             passes through BERT to get logits → softmax converts logits to probabilities → apply a
                             confidence threshold to return a label or None.</p>
+                        <p class="small">
+                            <ul class="list">
+                                <li><strong>Algorithm​: </strong>Fine-tuned BERT (Deep Learning – Transformer architecture) with a classification head.</li>
+                                <li><strong>Inputs / Outputs​: </strong>Independent variable → Input sentence (text). Dependent variable → Predicted emotion label (e.g., anger, sadness, fear).​​</li>
+                                <li><strong>Process: </strong>1. Tokenize text → IDs → BERT embeddings via attention. 2. ​[CLS] token → Dense layer (weights = slope, bias = intercept).​ 3. Softmax → Probability per emotion.​ 4. Threshold filter → Output label or None.</li>
+                                <li><strong>Loss Function: </strong>Cross-Entropy Loss for multi-class classification.​</li>
+                            </ul>
+                        </p>
+                        <br/>
                         <img src="images/bert_emotion_classifier_flow.png" alt="emotion_classifier" width="178"
                             height="366" />
                     </div>
@@ -309,10 +318,20 @@ Chatbot: "I'm really sorry you're feeling this way. You don’t have to go throu
                     <div class="section">
                         <h2>Challenges & Lessons</h2>
                         <ul class="list">
-                            <li>Model loading and filesystem/path issues</li>
-                            <li>Cleaning mixed-format data sources</li>
-                            <li>Balancing cost vs accuracy (cloud LLMs vs local models)</li>
-                            <li>Designing modular and explainable components</li>
+                            <li>Performance under peak demand Testing</li>
+                            <li>Model Accuracy - Intent and emotion classifiers to avoid false positives/negatives</li>
+                            <li>User Trust – Students may be hesitant to rely on a bot​</li>
+                            <li>Balancing cost vs accuracy for OpenAI vs local models</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>Future Opportunities</h2>
+                        <ul class="list">
+                            <li>Accessibility Voice – Enabled Student Support</li>
+                            <li>Personalized Academic Advising – Record Integration</li>
+                            <li>Smart Resource Recommendations​</li>
+                            <li>Multilingual Support</li>
                         </ul>
                     </div>
 
